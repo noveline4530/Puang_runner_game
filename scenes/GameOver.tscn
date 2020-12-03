@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/backgrounds/gameover.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Gameover.gd" type="Script" id=2]
+[ext_resource path="res://assets/audio/gameover.wav" type="AudioStream" id=3]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1896.0
+margin_bottom = 1017.0
+rect_scale = Vector2( 0.85, 0.9 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioGameover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )

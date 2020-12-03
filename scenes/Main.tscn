@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/sprites/backgrounds/cau2.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Background.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Main.gd" type="Script" id=3]
+[ext_resource path="res://assets/sprites/backgrounds/cau3.png" type="Texture" id=4]
+[ext_resource path="res://scripts/ObjectPool.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Puang.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/sprites/backgrounds/cau1.png" type="Texture" id=7]
+
+[node name="Main" type="Node2D"]
+position = Vector2( 4.17834, 1.99316 )
+scale = Vector2( 1, 0.994254 )
+script = ExtResource( 3 )
+
+[node name="Background1" type="Sprite" parent="."]
+scale = Vector2( 0.790123, 1.36506 )
+texture = ExtResource( 7 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="Background2" type="Sprite" parent="."]
+position = Vector2( 1600, 0 )
+scale = Vector2( 1.70859, 2.49079 )
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="Background3" type="Sprite" parent="."]
+position = Vector2( 3200, 0 )
+scale = Vector2( 1.80523, 3.31798 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 2 )
+
+[node name="CharacterPool" type="Node2D" parent="."]
+scale = Vector2( 2.09126, 0.942998 )
+script = ExtResource( 5 )
+g_path = "res://scenes/characters/"
+
+[node name="Puang" parent="." instance=ExtResource( 6 )]
+position = Vector2( 150, 400.144 )
+scale = Vector2( 0.494142, 0.576816 )
+mass = 0.102041
+gravity_scale = 12.0
+
+[node name="Label" type="Label" parent="."]
+light_mask = 0
+margin_left = 38.818
+margin_top = 26.1491
+margin_right = 286.818
+margin_bottom = 141.149
+rect_scale = Vector2( 5, 5 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.0392157, 0.415686, 0.901961, 1 )
+custom_colors/font_outline_modulate = Color( 1, 0.980392, 0.980392, 1 )
+text = "SCORE: 0"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

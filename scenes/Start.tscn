@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/backgrounds/start.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Start.gd" type="Script" id=2]
+[ext_resource path="res://assets/audio/start.wav" type="AudioStream" id=3]
+
+[node name="Start" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Start" type="TextureRect" parent="."]
+margin_right = 2000.0
+margin_bottom = 1125.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStart" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
